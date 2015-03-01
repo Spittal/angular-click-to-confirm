@@ -2,7 +2,7 @@
 
 A Better, Beautiful Way to Confirm Actions in Angular.
 
-[Demo]()
+[Demo](http://spittal.github.io/angular-click-to-confirm/app/index.html)
 
 Generally as easy as this:
 
