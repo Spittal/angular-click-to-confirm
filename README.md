@@ -26,7 +26,9 @@ Download the script [here]()
 
 Add it to any angular project
 
-    <script src="angular-click-to-confirm/dist/angular-click-to-confirm.min.js"></script>
+```html
+<script src="angular-click-to-confirm/dist/angular-click-to-confirm.min.js"></script>
+```
 
 #### Use It!
 
@@ -34,7 +36,9 @@ Include the directive on any element that has an ng-click action!
 
 **Note:** This must be on an element that also has an ng-click
 
-    <button ng-click="bestActionEver()" click-to-confirm>Best User Interaction... Ever</button>
+```html
+<button ng-click="bestActionEver()" click-to-confirm>Best User Interaction... Ever</button>
+```
 
 # Options
 
@@ -42,20 +46,26 @@ Include the directive on any element that has an ng-click action!
 
 You can easily add a custom message by adding a value to the directive
 
-    <button ng-click="someAction()" click-to-confirm="I'm Scared">Click Me</button>
+```html
+<button ng-click="someAction()" click-to-confirm="I'm Scared">Click Me</button>
+```
 
 #### Hot Background Colour Fade
 
 When the button is in it's "click to confirm" state it has the class "confirm" added to the button
 
-    <button class="button-1" ng-click="someAction()" click-to-confirm="I'm Scared">Click Me</button>
+```html
+<button class="button-1" ng-click="someAction()" click-to-confirm="I'm Scared">Click Me</button>
+```
 
 Then in CSS
 
-	.button-1 {
-		transition: all 300ms;
-	}
-	
-	.button-1.confirm {
-		background-color: #d9534f;
-	}
+```css
+.button-1 {
+	transition: all 300ms;
+}
+
+.button-1.confirm {
+	background-color: #d9534f;
+}
+```
