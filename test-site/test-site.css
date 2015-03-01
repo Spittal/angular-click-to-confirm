@@ -1,0 +1,23 @@
+.header {
+    margin-top: 15px;
+}
+
+.test-1-wrap {
+    margin-top: 15px;
+}
+
+.test-1, .test-2, .test-3 {
+    transition: all 300ms;
+}
+
+.test-1.confirm, .test-2.confirm, .test-3.confirm{
+    background-color: #d9534f;
+}
+
+.alert {
+    margin-top: 15px;
+}
+
+.test-1-alert {
+    margin-bottom: 0px;
+}

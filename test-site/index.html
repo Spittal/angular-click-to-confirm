@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="click-to-confirm-test-site">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Click to Confirm Test</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="test-site.css">
+</head>
+<body ng-controller="ClickConfirmTestCtrl as vm">
+
+    <section class="container header">
+        <div class="jumbotron">
+          <h1>Angular Click to Confirm</h1>
+          <p>A Beautiful Way to Confirm Actions in Angular.</p>
+
+          <small>Generally as easy to use as this</small>
+          <code>&lt;button ng-click="someAction()" click-to-confirm&gt;Click Me&lt;/button&gt;</code>
+
+          <div class="test-1-wrap">
+            <button class="btn btn-primary test-1" ng-click="vm.testAction1()" click-to-confirm>Click To Test Me Out!</button> 
+            <div ng-show="vm.testOneResponse" class="alert alert-success test-1-alert" role="alert">{{vm.testOneResponse}}</div>
+          </div>
+        </div>
+    </section>
+
+    <section class="container">
+      <h1>What Do I Need to Do?</h1>
+
+      <h4>Get the Script!</h4>
+      <p>We're on <a href="http://bower.io/">Bower</a> and recommend this action</p>
+      <code>bower install --save angular-click-to-confirm</code><br /><br />
+
+      <b>OR</b><br /><br />
+      <p>Download the script <a href="">here</a></p><br />
+
+      <h4>Inlcude the Script</h4>
+      <p>Add it to any angular project</p>
+      <code>&lt;script src="angular-click-to-confirm/dist/angular-click-to-confirm.min.js"&gt;&lt;/script&gt;</code><br /><br />
+
+      <h4>Use It!</h4>
+
+      <p>Include the directive on any element that has an ng-click action!</p> 
+      <p><b>Note:</b> This must be on an element that also has an ng-click</p>
+      <code>&lt;button ng-click="bestActionEver()" click-to-confirm&gt;Best User Interaction... Ever&lt;/button&gt;</code>
+
+      <h1>Options</h1>
+
+      <h4>Custom Message</h4>
+      <p>You can easily add a custom message by adding a value to the directive</p>
+      <code>&lt;button ng-click="someAction()" click-to-confirm="I'm Scared"&gt;Click Me&lt;/button&gt;</code>
+      <h5>See It In Action</h5>
+      <div class="test-2-wrap">
+        <button class="btn btn-primary test-2" ng-click="vm.testAction2()" click-to-confirm="I'm Scared">Afraid to Click?</button> 
+        <div ng-show="vm.testTwoResponse" class="alert alert-success test-2-alert" role="alert">{{vm.testTwoResponse}}</div>
+      </div>
+
+      <h4>Hot Background Colour Fade</h4>
+      <p>When the button is in it's "click to confirm" state it has the class "confirm" added to the button</p>
+      <code>&lt;button ng-click="someAction()" click-to-confirm="I'm Scared"&gt;Click Me&lt;/button&gt;</code>
+      <h5>See It In Action</h5>
+      <div class="test-3-wrap">
+        <button class="btn btn-primary test-3" ng-click="vm.testAction3()" click-to-confirm="It's Now Red.">My Colour is Blue</button> 
+        <div ng-show="vm.testThreeResponse" class="alert alert-success test-3-alert" role="alert">{{vm.testThreeResponse}}</div>
+      </div><br /><br /><br /><br /><br />
+
+    </section>
+
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="../src/click-to-confirm-directive.js"></script>
+
+<script>
+(function() {
+
+angular
+    .module('click-to-confirm-test-site', [
+        '$click-to-confirm'
+    ])
+    .controller('ClickConfirmTestCtrl', ClickConfirmTestCtrl);
+
+    function ClickConfirmTestCtrl($scope) {
+        var vm = this;
+
+        vm.testAction1 = testAction1;
+        vm.testAction2 = testAction2;
+        vm.testAction3 = testAction3;
+
+        ////////////////////////////
+
+        function testAction1() {
+          vm.testOneResponse = "Hey, look! You did it!";
+        }
+
+        function testAction2() {
+          vm.testTwoResponse = "No need to be, it's just a Bootstrap alert!";
+        }
+
+        function testAction3() {
+          vm.testThreeResponse = "Now that, is a hot background fade!";
+        }
+    }
+})();
+
+</script>
+</body>
+</html>
