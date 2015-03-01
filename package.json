@@ -1,0 +1,35 @@
+{
+  "name": "angular-click-to-confirm",
+  "version": "0.0.1",
+  "description": "A better way to confirm actions in Angular.",
+  "main": "dist/angular-click-to-confirm.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Spittal/angular-click-to-confirm.git"
+  },
+  "keywords": [
+    "AngularJs",
+    "Angular",
+    "UX",
+    "ng-click",
+    "Click-To-Confirm"
+  ],
+  "author": "Jamie Spittal <jamie@randomshapes.com>",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/Spittal/angular-click-to-confirm/issues"
+  },
+  "homepage": "https://github.com/Spittal/angular-click-to-confirm",
+  "devDependencies": {
+    "browser-sync": "^2.0.0",
+    "gulp": "~3.8.5",
+    "gulp-jshint": "~1.6.3",
+    "gulp-load-plugins": "~0.5.3",
+    "gulp-log": "0.0.0",
+    "gulp-uglify": "~0.3.1",
+    "gulp-util": "^3.0.0",
+    "gulp-rename": "^1.2.0",
+    "jshint-stylish": "~0.2.0",
+    "run-sequence": "~0.3.6"
+  }
+}
