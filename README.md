@@ -6,7 +6,9 @@ A Better, Beautiful Way to Confirm Actions in Angular.
 
 Generally as easy as this:
 
-    <button ng-click="someAction()" click-to-confirm>Click Me</button>
+```html
+<button ng-click="someAction()" click-to-confirm>Click Me</button>
+```
 
 **Requires jQuery. <small>I'll get to removing that dependancy soon, promise.</small>**
 
@@ -16,7 +18,9 @@ Generally as easy as this:
 
 We're on [Bower](http://bower.io/) and recommend this action
 
-    bower install --save angular-click-to-confirm
+```
+bower install --save angular-click-to-confirm
+```
 
 **OR**
 
