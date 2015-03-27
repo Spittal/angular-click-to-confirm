@@ -1,6 +1,6 @@
 (function() {
 angular
-    .module("$click-to-confirm", [])
+    .module("rs-click-to-confirm", [])
     .directive("clickToConfirm", clickToConfirm);
 
     function clickToConfirm($timeout) {
